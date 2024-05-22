@@ -25,6 +25,6 @@ cronjob1="15 14 * * 1-5 /bin/bash $1/getMyTrain.sh >/dev/null 2>&1"
 cronjob2="15 15 * * 1-5 /bin/bash $1/getMyTrain.sh >/dev/null 2>&1"
 cronjob3="45 15 * * 1-5 /bin/bash $1/getMyTrain.sh >/dev/null 2>&1"
 
-{ crontab -l; echo "$cronjob1"; echo "$cronjob2"; echo "$cronjob3"; } | crontab -
+{ crontab -l; echo "$cronjob1"; echo "$cronjob2"; echo "$cronjob3"; } | sudo crontab -
 
 echo "Setup complete. You will receive notifications every weekday at 2:15pm, 3:15pm and 3:45pm"
