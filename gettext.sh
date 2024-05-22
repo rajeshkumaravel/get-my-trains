@@ -3,10 +3,11 @@
 usage() {
     echo "Usage: $0 path and api_key"
     echo "Example: $0 /user/desktop qwer123"
+    echo "Email/phone: $0 email / phone"
     exit 1
 }
 
-if [ "$#" -ne 2 ]; then
+if [ "$#" -ne 3 ]; then
     usage
 fi
 
